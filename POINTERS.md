@@ -1,5 +1,5 @@
 # C-POINTER
-## pointers-increment and decrement
+## pointers- 1 increment and decrement
 
 ```c
 #include <stdio.h>
@@ -18,6 +18,7 @@ int main(){
   b
 
   ```
+  ---
 
 ## pointer-2
 
@@ -36,4 +37,56 @@ int main() {
 Element  between: 2
 
 ```
+## rules and conditions
+ -  ptr++ it moves to next element sizeof(type).
+ -  we can also give ptr + n or -n , p2 - p1 it gives no  element between them.
+  ----
+
+ ## pointer - 3 
+ create a programe that print all arr elemrnt using only pointers :
+  -find the last element and calculate the steps between of any two arr.
+
+  **solution**
+  ```c
+  #include <stdio.h>
+
+int main() {
+    int arr[]={10,20,30,40,50};
+    int *ptr=arr;
+    
+    int n, steps =0;
+    printf("enter the n value:\n");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+
+        printf("%d\n",*ptr);
+        ++ptr;
+        steps++;        
+    }
+    printf("elements between arr[0] to arr[3] :%d\n", &arr[3]-&arr[1]);
+    printf("elements value diffrence between arr[0] to arr[3] :%d\n", arr[3]-arr[1]);
+    printf("total steps: %d\n ",steps);
+    if(n<=5){
+        printf("lastvalue: %d",*(ptr-1));
+    }
+  return 0;
+}
+```
+
+***output**
+```
+enter the n value:5
+10
+20
+30
+40
+50
+elements between arr[0] to arr[3] :2
+elements value diffrence between arr[0] to arr[3] :20
+total steps: 5
+ lastvalue: 50
+ ```
+ ----
+
+
 
