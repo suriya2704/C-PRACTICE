@@ -94,18 +94,18 @@ total steps: 5
 
    void update(int *ptr, int size){
     for (int i=0; i<size; i++){
-      *(ptr+i)= *(ptr+i) * 2 ;
+      *(ptr+i)= *(ptr+i) * 2 ; //here we can also write ptr[i]=*(ptr+i)* 2 bot are same
     }
 
    }
   int main(){
     int arr[]={1,2,3,4,5};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = sizeof(arr) / sizeof(arr[0]); 
     update(arr,n);
     printf("values are:");
 
     for(int i=0; i<n ; i++){
-      printf("%d," , *(arr+i));
+      printf("%d," , *(arr+i));// we can also write arr[i];
     }
   }
   ```
