@@ -73,7 +73,7 @@ int main() {
 }
 ```
 
-***output**
+**output**
 ```
 enter the n value:5
 10
@@ -87,6 +87,34 @@ total steps: 5
  lastvalue: 50
  ```
  ----
+
+ ## pointer - 4
+  ```c
+  #include <stdio.h>
+
+   void update(int *ptr, int size){
+    for (int i=0; i<size; i++){
+      *(ptr+i)= *(ptr+i) * 2 ;
+    }
+
+   }
+  int main(){
+    int arr[]={1,2,3,4,5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    update(arr,n);
+    printf("values are:");
+
+    for(int i=0; i<n ; i++){
+      printf("%d," , *(arr+i));
+    }
+  }
+  ```
+  **output**
+  ```
+  values are:2,4,6,8,10
+  ```
+  ---
+
 
 
 
