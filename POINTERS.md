@@ -8,7 +8,7 @@ int main(){
     char arr[]={'a','b','c'};
     char *ptr=arr;
     printf("%c\n",arr);
-    ++ptr;
+    ++ptr;             
     printf("%d",arr);
 }
   ```
@@ -40,6 +40,8 @@ Element  between: 2
 ## rules and conditions
  -  ptr++ it moves to next element sizeof(type).
  -  we can also give ptr + n or -n , p2 - p1 it gives no  element between them.
+ -  here simplely p+1 is not valid because you did't storeing it.so p=p+1 is valid.
+ -  let say when you are adding p+2.what it means address+2*(sizeof(datatype)).
   ----
 
  ## pointer - 3 
