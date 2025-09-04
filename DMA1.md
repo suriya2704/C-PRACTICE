@@ -45,3 +45,45 @@ values are: 1
   - ptr[2]  → next 4 bytes
   - So total = 12 bytes.
   ----
+
+## PROGRAME-2
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n,*ptr;
+    printf("enter the value : ");
+    scanf("%d",&n);
+    printf("enter the value :");
+    ptr=(int *)malloc(n *sizeof(int));
+    
+    for (int i=0;i<n;i++){
+        scanf("%d",ptr+i);
+    }
+    
+    printf("enter reassinged value: ");
+    scanf("%d",&n);
+    printf("reassinged value: ");
+    int *ptr1=(int *)realloc(ptr,n*sizeof(int));
+    
+    for(int i=0;i<n;i++){
+        printf("%d\n", *(ptr1+i));
+    }
+    
+    free(ptr1);
+}
+
+```
+**output**
+```
+enter the value : 3
+enter the value :1 2 3
+enter reassinged value: 4
+reassinged value: 1
+2
+3
+0
+```
+---
