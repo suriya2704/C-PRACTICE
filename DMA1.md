@@ -1,5 +1,5 @@
 # C-DYNAMIC MEMORY ALLOCATION
-## PROGRAME-1
+## PROGRAM-1
 
 ```c
 #include <stdio.h>
@@ -46,7 +46,7 @@ values are: 1
   - So total = 12 bytes.
   ----
 
-## PROGRAME-2
+## PROGRAM-2
 
 ```c
 #include <stdio.h>
@@ -87,3 +87,42 @@ reassinged value: 1
 0
 ```
 ---
+
+## PROGRAM-2
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int *display (){
+    int *ptr;
+    ptr=(int*)malloc(3*sizeof(int));
+    printf("enter the value:");
+
+    for (int i=0;i<3;i++){
+        scanf("%d",(ptr+i));
+    }
+    return ptr;
+}
+
+int main()
+{
+    int   *ptr1;
+    ptr1=display();
+    printf("values are: ");
+
+    for(int i=0;i<3;i++){
+       printf("%d\t",*(ptr1+i));
+    }
+    free(ptr1);
+    return 0;
+}
+
+```
+**output**
+```
+enter the value:3 4 5
+values are: 3	4	5	
+```
+---
+
