@@ -88,7 +88,7 @@ reassinged value: 1
 ```
 ---
 
-## PROGRAM-2
+## PROGRAM-3
 
 ```c
 #include <stdio.h>
