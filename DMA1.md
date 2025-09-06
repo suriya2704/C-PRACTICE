@@ -174,7 +174,6 @@ Array after realloc: 4 5 5 6 7
 ## PROGRAM-5
 
 ```c
-// Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -193,7 +192,7 @@ int main() {
     }
     printf("values are:\n");
     for(int i=0;i<3;i++){
-     printf(" volt=%d,cut=%d\n", a[i].vol, a[i].cur );
+     printf(" volt=%d,cur=%d\n", a[i].vol, a[i].cur );
     }
 
     return 0;
@@ -202,9 +201,9 @@ int main() {
 **output**
 ```
 values are:
- volt=1,cut=2
- volt=2,cut=3
- volt=3,cut=4
+ volt=1,cur=2
+ volt=2,cur=3
+ volt=3,cur=4
  ```
  ---
 
