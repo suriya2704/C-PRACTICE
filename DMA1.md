@@ -126,3 +126,85 @@ values are: 3	4	5
 ```
 ---
 
+## PROGRAM-4
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr; 
+    arr = (int*)malloc(3 * sizeof(int));
+    printf("enter the value:");
+     for (int i = 0; i < 3; i++) {
+       scanf("%d",arr+i);   
+    }
+    printf("values are:");
+    for (int i = 0; i < 3; i++) {
+       printf("%d ",*(arr+i));   
+    }
+    
+    int *arr1 = (int*)realloc(arr, 6 * sizeof(int));
+    if (arr1 == NULL) {
+        printf("Reallocation failed!\n");
+        return 1;}
+   
+    printf("\nenter the value:");
+    for (int i = 0; i < 6; i++) {
+        scanf("%d", arr+ i );  
+    } 
+    printf("Array after realloc: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(arr+i));
+    }
+    free(arr);
+    return 0;
+}
+
+```
+**output**
+```
+enter the value:1 2 3
+values are:1 2 3 
+enter the value:4 5 5 6 7 8
+Array after realloc: 4 5 5 6 7 
+```
+---
+
+## PROGRAM-5
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+
+ struct device {
+    int vol;
+    int cur;
+};
+
+int main() {
+    struct device *a;
+    a=(struct device*)malloc(3*sizeof(struct device));
+    
+    for(int i=0;i<3;i++){
+      a[i].vol=i+1;
+       a[i].cur=i+2;
+    }
+    printf("values are:\n");
+    for(int i=0;i<3;i++){
+     printf(" volt=%d,cut=%d\n", a[i].vol, a[i].cur );
+    }
+
+    return 0;
+}
+```
+**output**
+```
+values are:
+ volt=1,cut=2
+ volt=2,cut=3
+ volt=3,cut=4
+ ```
+ ---
+
