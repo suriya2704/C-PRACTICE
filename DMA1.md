@@ -183,6 +183,7 @@ Array after realloc: 4 5 5 6 7
 };
 
 int main() {
+    
     struct device *a;
     a=(struct device*)malloc(3*sizeof(struct device));
     
