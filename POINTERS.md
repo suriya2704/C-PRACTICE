@@ -7,11 +7,11 @@
 int main(){
     char arr[]={'a','b','c'};
     char *ptr=arr;
-    printf("%c\n",arr);
+    printf("%c\n",*ptr);
     ++ptr;
-    printf("%d",arr);
-}
-  ```
+    printf("%c",*ptr);
+ }
+ ```
   ***output***
   ```
   a
