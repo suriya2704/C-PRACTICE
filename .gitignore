@@ -1,0 +1,15 @@
+# VS Code
+.vscode/
+
+# Build artifacts
+bin/
+obj/
+build/
+*.exe
+*.out
+
+# Code::Blocks project files
+*.cbp
+*.depend
+*.layout
+*.log

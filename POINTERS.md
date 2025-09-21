@@ -7,11 +7,11 @@
 int main(){
     char arr[]={'a','b','c'};
     char *ptr=arr;
-    printf("%c\n",*ptr);
+    printf("%c\n",arr);
     ++ptr;
-    printf("%c",*ptr);
- }
- ```
+    printf("%d",arr);
+}
+  ```
   ***output***
   ```
   a
@@ -115,35 +115,6 @@ total steps: 5
   ```
   ---
 
-## PROGRAM -5
-```c
-
-#include <stdio.h>
-
-int main() {
-   int a=2, *p=&a,**q=&p,***r=&q;
-   
-    printf("value of a: %d\n",a);
-    printf("value of a: %d\n",*p);
-    printf("value of a: %d\n",**q);
-    printf("value of a: %d\n",***r);
-    printf("address of p: %x %x %x\n",&p,q,*r);
-    printf("address of a: %x %x %x ",&a ,p,*q);// also **r gives same address
-
-
-    return 0;
-}
-```
-**output**
-```
-value of a: 2
-value of a: 2
-value of a: 2
-value of a: 2
-address of p: d3aba998 d3aba998 d3aba998
-address of a: d3aba9a4 d3aba9a4 d3aba9a4 
-```
----
 
 
 
